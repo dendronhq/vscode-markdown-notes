@@ -80,10 +80,16 @@ export function getRefAt(document: vscode.TextDocument, position: vscode.Positio
     // keep the end
     let r = new vscode.Range(s, e);
     ref = document.getText(r);
+    // check for piped wiki link
+    let [pipeTitle, linkTitle] = ref.split("|").map(ent => ent.trim());
+    if (!linkTitle) {
+      linkTitle = pipeTitle;
+      pipeTitle = "";
+    }
     if (ref) {
       return {
         type: RefType.WikiLink,
-        word: ref, // .replace(/^\[+/, ''),
+        word: linkTitle, // .replace(/^\[+/, ''),
         // TODO: parameterize extensions. Add $ to end?
         hasExtension: !!ref.match(/\.(md|markdown)/i),
         range: r, // range,
