@@ -1,11 +1,11 @@
 {
-  "name": "vscode-markdown-notes",
-  "displayName": "Markdown Notes",
+  "name": "dendron-markdown-notes",
+  "displayName": "Dendron Markdown Notes",
   "description": "Navigate notes with [[wiki-links]], backlinks, and #tags (like Bear, Roam, etc). Automatically create notes from new inline [[wiki-links]]. Use Peek Definition to preview linked notes.",
   "version": "0.0.13",
-  "publisher": "kortina",
+  "publisher": "dendron",
   "repository": {
-    "url": "https://github.com/kortina/vscode-markdown-notes.git",
+    "url": "https://github.com/dendronhq/vscode-markdown-notes.git",
     "type": "git"
   },
   "engines": {

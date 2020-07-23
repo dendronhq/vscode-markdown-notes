@@ -1,5 +1,7 @@
 # Markdown Notes for VS Code
 
+🚨This is a fork of [Markdown Notes](https://github.com/kortina/vscode-markdown-notes) to support Dendron specific features! 🚨
+
 Use `[[wiki-links]]`, `backlinks`, and `#tags` for fast-navigation of markdown notes.
 
 Automatically create notes from new inline `[[wiki-links]]`.
