@@ -8,5 +8,6 @@
 - [[sub.md]] - exists in sub directory
 - [[extension test mirror]]
 - [[extension-test-mirror.md]]
+- [[foo|top.md]] - exists
 
 #tag #another_tag

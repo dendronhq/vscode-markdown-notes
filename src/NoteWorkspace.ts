@@ -175,6 +175,11 @@ export class NoteWorkspace {
     n = this.stripExtension(n);
     // slugify (to normalize spaces)
     n = this.slugifyTitle(n);
+
+    let [pipeTitle, _n] = n.split("|").map(ent => ent.trim())
+    if (_n) {
+      n = _n;
+    }
     return n;
   }
 
