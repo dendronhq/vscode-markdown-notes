@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { basename, dirname, join, normalize, relative } from 'path';
 import { existsSync, writeFileSync } from 'fs';
+import {Note as DNote} from "@dendronhq/common-all";
 
 export const foo = () => {
   return 1;
@@ -275,11 +276,13 @@ export class NoteWorkspace {
 
   static newNoteContent(noteName: string) {
     const template = NoteWorkspace.newNoteTemplate();
-    const contents = template
-      .replace(/\\n/g, '\n')
-      .replace(/\$\{noteName\}/g, noteName)
-      .replace(/\$\{timestamp\}/g, new Date().toISOString());
-    return contents;
+    const note = new DNote({fname: noteName})
+    note.body = `# ${note.title}`;
+    // const contents = template
+    //   .replace(/\\n/g, '\n')
+    //   .replace(/\$\{noteName\}/g, noteName)
+    //   .replace(/\$\{timestamp\}/g, new Date().toISOString());
+    return note.render();
   }
 
   static overrideMarkdownWordPattern() {

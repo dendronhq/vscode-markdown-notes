@@ -122,11 +122,13 @@
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
+  "dependencies": {
+    "@dendronhq/common-all": "^0.5.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.1",
     "@babel/preset-env": "^7.10.1",
     "@babel/preset-typescript": "^7.10.1",
-    "babel-jest": "^26.0.1",
     "@types/glob": "^7.1.1",
     "@types/jest": "^25.2.3",
     "@types/jest-cli": "^24.3.0",
@@ -134,6 +136,7 @@
     "@types/vscode": "^1.32.0",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
+    "babel-jest": "^26.0.1",
     "babylon": "^6.18.0",
     "eslint": "^6.8.0",
     "glob": "^7.1.4",
